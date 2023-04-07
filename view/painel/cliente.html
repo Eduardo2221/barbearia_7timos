@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Cliente</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="../../view/css/style_painel.css">
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+
+        <header>
+
+            <div id="logo">
+                <img src="../img/logo7timos.png">
+                <h1>Barbearia 7timos</h1>
+            </div>
+
+            <div id="perfil" class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Configurações
+                </button>
+                <ul class="dropdown-menu">
+                    <li><h5 class="dropdown-header">SUA CONTA</h5></li>
+                    <li><a class="dropdown-item" href="usuarios/alterarconta.html">alterar conta</a></li>
+                    <li><a class="dropdown-item" href="usuarios/excluirconta.html">excluir conta</a></li>
+                    <li><a class="dropdown-item" href="../../model/sair.php">sair da conta</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+        <article>
+
+
+            <div id="conteiner">
+
+                <div class="colunas">
+                    <div><p>serviços</p></div>
+                    <div class="itens"><a href="servico/buscarservico.html">buscar</a></div>
+                </div>
+                <div class="colunas">
+                    <div><p>produtos</p></div>
+                    <div class="itens"><a href="produto/buscarproduto.html">buscar</a></div>
+                </div>
+                <div class="colunas">
+                    <div><p>pedidos</p></div>
+                    <div class="itens"><a href="pedido/buscarpedido.html">buscar</a></div>
+                    <div class="itens"><a href="pedido/cadastrarpedido.html">cadastrar</a></div>
+                    <div class="itens"><a href="pedido/atualizarpedido.html">alterar</a></div>
+                </div>
+                <div class="colunas">
+                    <div><p>agendas</p></div>
+                    <div class="itens"><a href="agenda/buscaragenda.html">buscar</a></div>
+                    <div class="itens"><a href="agenda/cadastraragenda.html">cadastrar</a></div>
+                    <div class="itens"><a href="agenda/atualizaragenda.html">alterar</a></div>
+                </div>
+            </div>
+
+        </article>
+
+        <footer>
+
+            <p>Contato : (61)99865-5846 </p>
+            <p>E-mail : barbearia7timos@gmail.com</p>
+            <p>Siga-nos:</p>
+
+        </footer>
+
+    </main>
+</body>
+</html>

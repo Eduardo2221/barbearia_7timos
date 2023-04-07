@@ -1,0 +1,19 @@
+article {
+    background: #252839fa;
+    padding: 25px 0;
+}
+
+.row{
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.column h3 {
+    color: #cccccc;
+}
+
+.column img {
+    width: 200px;
+    height: 200px;
+}

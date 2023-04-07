@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+
+    <link rel="stylesheet" href="view/bootstrap/css/bootstrap.min.css">
+    <script src="view/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="css/style_main.css">
+    <link rel="stylesheet" type="text/css" href="css/style_usuarios.css">
+    <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+
+        <header>
+
+            <div id="logo">
+                <img src="img/logo7timos.png">
+            </div>
+            <h1>Barbearia 7timos</h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Principal</a>
+                    </li>
+                    <li>
+                        <a href="servicos.html" data-text="&nbsp;Serviços">&nbsp;Serviços&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="agenda.html" data-text="&nbsp;Agenda">&nbsp;Agenda&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="usuario.html" data-text="&nbsp;Usuário">&nbsp;Usuário&nbsp;</a>
+                    </li>
+                    <!-- <li><a href="view/avaliacao.php">Avaliação</a></li>
+                    <li><a href="view/sobre.html">Sobre</a></li> -->
+                </ul>
+            </nav>
+
+        </header>
+
+        <article>
+
+            <div class="container">
+                <div class="buttonsForm">
+                  <div class="btnColor"></div>
+                  <button id="btnSignin">Sign in</button>
+                  <button id="btnSignup">Sign up</button>
+                </div>
+            
+                <form id="signin" method="POST" action="../model/valida.php">
+                  <input type="text" name="email" id="inputEmail" placeholder="Email" required />
+                  <!-- <i class="fas fa-envelope iEmail"></i> -->
+                  <input type="password" name="senha" id="inputPassword" placeholder="Senha" required />
+                  <!-- <i class="fas fa-lock iPassword"></i> -->
+                  <!-- <div class="divCheck">
+                    <input type="checkbox" />
+                    <span>Remember Password</span>
+                  </div> -->
+                  <button type="submit">ENTRAR</button>
+                </form>
+            
+                <form id="signup" method="POST" action="../model/cadastrarcontabd.php">
+                    <input name="nome" type="text" id="nome" placeholder="Nome" required />
+                    <!-- <i class="fas fa-envelope iEmail"></i> -->
+                    <input name="cpf" type="text" id="cpf" placeholder="CPF" required />
+                    <!-- <i class="fas fa-envelope iEmail"></i> -->
+                    <input name="tel" type="tel" id="tel" placeholder="Telefone" required />
+                    <!-- <i class="fas fa-envelope iEmail"></i> -->
+                    <input name="dtnasc" type="date" id="dtnasc" placeholder="Data de Nascimento" required />
+                    <!-- <i class="fas fa-envelope iEmail"></i> -->
+                    <input name="email" type="email" id="email" placeholder="Email" required /> 
+                    <!-- <i class="fas fa-envelope iEmail"></i> -->
+                    <input name="senha" type="password" id="senha" placeholder="Senha" required />
+                    <!-- <i class="fas fa-lock iPassword"></i> -->
+                    <!-- <div class="divCheck">
+                        <input type="checkbox" required />
+                        <span>Terms</span>
+                    </div> -->
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            
+            <script src="js/login.js"></script>
+
+        </article>
+
+        <footer>
+
+            <p>Contato : (61)99865-5846 </p>
+            <p>E-mail : barbearia7timos@gmail.com</p>
+            <p>Siga-nos:</p>
+
+        </footer>
+
+    </main>
+</body>
+</html>

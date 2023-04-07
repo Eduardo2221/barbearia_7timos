@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+
+    <link rel="stylesheet" href="view/bootstrap/css/bootstrap.min.css">
+    <script src="view/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="css/style_main.css">
+    <link rel="stylesheet" type="text/css" href="css/style_form.css">
+    <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+
+        <header>
+
+            <div id="logo">
+                <img src="img/logo7timos.png">
+            </div>
+            <h1>Barbearia 7timos</h1>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Principal</a>
+                    </li>
+                    <li>
+                        <a href="servicos.html" data-text="&nbsp;Serviços">&nbsp;Serviços&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="agenda.html" data-text="&nbsp;Agenda">&nbsp;Agenda&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="usuario.html" data-text="&nbsp;Usuário">&nbsp;Usuário&nbsp;</a>
+                    </li>
+                    <!-- <li><a href="view/avaliacao.php">Avaliação</a></li>
+                    <li><a href="view/sobre.html">Sobre</a></li> -->
+                </ul>
+            </nav>
+
+        </header>
+
+        <article  style="background-color: #cccccc; margin: 0;">
+
+            <form method="post" action="../model/painel/agenda/cadastraragendabd.php">
+                <h2>Cadastrar Agenda</h2>
+    
+                <input name="codAge" type="number" id="codAge" placeholder="Codigo da Agenda" required />
+                <input name="nomeCli" type="text" id="nomeCli" placeholder="Seu Nome" required />
+                <input name="telCli" type="text" id="telCli" placeholder="Seu Telefone" required />
+                <input name="emailCli" type="email" id="emailCli" placeholder="Seu Email" required />
+                <input name="tpServ" type="text" id="tpServ" placeholder="Email" required />
+                <input name="hrAgenda" type="time" id="hrAgenda" placeholder="Horario" required />
+                <button type="submit">cadastrar</button>
+    
+            </form>
+    
+        </article>
+
+        <footer>
+
+            <p>Contato : (61)99865-5846 </p>
+            <p>E-mail : barbearia7timos@gmail.com</p>
+            <p>Siga-nos:</p>
+
+        </footer>
+
+    </main>
+</body>
+</html>
