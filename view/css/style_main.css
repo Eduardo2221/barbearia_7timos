@@ -48,6 +48,8 @@ nav ul {
     flex-direction: row;
     border: 10px;
     gap: 30px;
+    margin-bottom: 10px;
+    padding: 0;
 }
 
 nav ul li {
@@ -69,6 +71,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #cccccc;
     border-radius: 5px;
+    color: #cccccc;
 }
 
 footer {
