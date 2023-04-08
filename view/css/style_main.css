@@ -43,6 +43,8 @@ nav {
 nav ul {
     position: relative;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: row;
     border: 10px;
     gap: 30px;
