@@ -18,10 +18,12 @@
     VALUE ('$nome','$cpf','$tel','$dtnasc','$email','$senha','$niveis_acesso_id');";
 
     if ($conexao->query($sql) === TRUE) {
-        echo "Nova inserção de USUARIO realizada Sucesso!";
+        echo  "<script>alert('Nova inserção de USUARIO realizada Sucesso!');</script>";
+        // echo "Nova inserção de USUARIO realizada Sucesso!";
     } else {
         echo "Erro:" . $sql . "<br>" . $conexao->error;
     }
     echo "<br>";
     $conexao->close();
+    header('location: ../view/usuario.html');
 ?>

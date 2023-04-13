@@ -16,7 +16,11 @@ BUSCA DE DADOS EM TABELAS
           
         // PASSO 3 - SQL PARA BUSCAR EM TABELAS
 
-        $sql = "SELECT codped_PK, id_usuarios_FK, codprod_FK, descr, vlped FROM pedido WHERE codped_PK = '$codped_PK' ";
+        if ($codped_PK == 0) {
+            $sql = "SELECT codped_PK, id_usuarios_FK, codprod_FK, descr, vlped FROM pedido";
+        } else {
+            $sql = "SELECT codped_PK, id_usuarios_FK, codprod_FK, descr, vlped FROM pedido WHERE codped_PK = '$codped_PK' ";
+        }
 
         $result = $conexao->query($sql)
                 or die("Erro ao pesquisar dados do cliente.") . mysqli_error();

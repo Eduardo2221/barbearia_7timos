@@ -18,7 +18,11 @@ BUSCA DE DADOS EM TABELAS
           
         // PASSO 3 - SQL PARA BUSCAR EM TABELAS
 
-        $sql = "SELECT  id  , nome , cpf  , tel , dtnasc , email , niveis_acesso_id FROM usuarios WHERE cpf = '$cpf' ";
+        if ($cpf == 0) {
+            $sql = "SELECT  id  , nome , cpf  , tel , dtnasc , email , niveis_acesso_id FROM usuarios";
+        } else {
+            $sql = "SELECT  id  , nome , cpf  , tel , dtnasc , email , niveis_acesso_id FROM usuarios WHERE cpf = '$cpf' ";
+        }
 
         $result = $conexao->query($sql)
                 or die("Erro ao pesquisar dados do cliente.") . mysqli_error();
