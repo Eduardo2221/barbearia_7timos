@@ -6,7 +6,11 @@
           
     // PASSO 3 - SQL PARA BUSCAR EM TABELAS
 
-    $sql = "SELECT codServ, tipoServ, vlServ, dtServ, hrServ FROM Servicos WHERE codServ = '$codServ' ";
+    if ($codServ == 0) {
+        $sql = "SELECT codServ, tipoServ, vlServ, dtServ, hrServ FROM Servicos";
+    } else {
+        $sql = "SELECT codServ, tipoServ, vlServ, dtServ, hrServ FROM Servicos WHERE codServ = '$codServ' ";
+    }
 
     $result = $conexao->query($sql)
             or die("Erro ao pesquisar dados do Agendamento.") . mysqli_error();
