@@ -31,8 +31,7 @@ BUSCA DE DADOS EM TABELAS
             // num_rows - dados de saída de cada linha
             while ($row = $result->fetch_assoc()) {
 
-                echo "Código de cliente: " . $row ["id"] . " <br> Nome do cliente: " . $row["nome"] . " <br> CPF: " . $row["cpf"] . " <br> Telefone: " . $row["tel"] . " <br> Data de Nascimento: " . $row["dtnasc"] . " <br> E-mail: " . $row["email"] . " <br> nivel acesso: " . $row["niveis_acesso_id"] . "<br><br>";
-
+                echo "<table border=1><tr><th>Código de cliente</th><th>Nome </th><th>Cpf </th><th>Telefone </th><th>Data de Nascimento</th><th>E-mail</th><th>Nivel de Acesso</th></tr><tr><th>".$row ["id"]."</th><th>".$row["nome"]."</th><th>".$row["cpf"]."</th><th>".$row["tel"]."</th><th>".$row["dtnasc"]."</th><th>".$row["email"]."</th><th>".$row["niveis_acesso_id"]."</th></tr></table><br><br>";
             }
         } else {
             echo "0 resultados encontrados";

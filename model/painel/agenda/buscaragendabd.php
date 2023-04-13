@@ -19,8 +19,24 @@
         // num_rows - dados de saída de cada linha
         while ($row = $result->fetch_assoc()) {
 
-            echo "<br> Código do Agendamento: " . $row ["codAge"] . " <br> Nome do Cliente: " . $row["nomeCli"] . " <br> Telefone do Cliente: " . $row["telCli"] . " <br> Email do Cliente: " . $row["emailCli"] . " <br> Tipo de Serviço: " . $row["tpServ"] . "<br> Horario do Agendamento" . $row["hrAgenda"] . "<br><br>";
-
+            echo "<table border=1>
+                <tr>
+                    <th>Código do Agendamento</th>
+                    <th>Nome do Cliente</th>
+                    <th>Telefone do Cliente</th>
+                    <th>Email do Cliente</th>
+                    <th>Tipo de Serviço</th>
+                    <th>Horario do Agendamento</th>
+                </tr>
+                <tr>
+                    <th>" . $row ["codAge"] . "</th>
+                    <th>" . $row["nomeCli"] . "</th>
+                    <th>" . $row["telCli"] . "</th>
+                    <th>" . $row["emailCli"] . "</th>
+                    <th>" . $row["tpServ"] . "</th>
+                    <th>" . $row["hrAgenda"] . "</th>
+                </tr>
+                </table><br><br>";
         }
     } else {
         echo "0 resultados encontrados";

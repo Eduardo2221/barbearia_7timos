@@ -29,10 +29,22 @@ BUSCA DE DADOS EM TABELAS
             // num_rows - dados de saída de cada linha
             while ($row = $result->fetch_assoc()) {
 
-                echo "Código do Pedido: " . $row ["codped_PK"] . " <br> Código de Cliente: " . $row["id_usuarios_FK"] . " <br> Código do Produto: " . $row["codprod_FK"] . " <br> Descrição: " . $row["descr"] . " <br> Valor do Pedido: " . $row["vlped"] . "<br><br>";
-
-                // echo "<TABLE border = 1>" "<TR>""<TD>" Código de cliente: "</TD>""</TR>""</TABLE>" . $row["codcli_PK"] . "<TABLE border = 1><TR><TD>Nome do cliente: </TD></TR></TABLE>" . $row["nomecli"] . "<TABLE border = 1><TR><TD>CPF: </TD></TR></TABLE>" . $row["cpf"] . "<TABLE border = 1><TR><TD>Telefone: </TD></TR></TABLE>" . $row["tel"] . "<TABLE border = 1><TR><TD>Data de Nascimento: </TD></TR></TABLE>" . $row["dtnasc"] . "<TABLE border = 1><TR><TD> E-mail: </TD></TR></TABLE>" . $row["email"] . "<TABLE border = 1><TR><TD> Endereço: </TD></TR></TABLE>" . $row["ender"] . "<TABLE border = 1><TR><TD> Bairro: </TD></TR></TABLE>" . $row["bairro"] . "<TABLE border = 1><TR><TD> Cidade: </TD></TR></TABLE>" . $row["cidade"] . "<TABLE border = 1><TR><TD> CEP: </TD></TR></TABLE>" . $row["cep"] . "<TABLE border = 1><TR><TD> País: </TD></TR></TABLE>" . $row["pais"] . "<br><br></TR></TABLE>";
-                // echo "<TABLE border = 1>" "<TR>""<TD>" "Código de cliente:" "</TD>" "<TD>" $row["codcli_PK"]"</TD>" "<TD>" "Nome do cliente:" "</TD>" "<TD>"$row["nomecli"]"</TD>" "<TD>" "CPF:" "</TD>" "<TD>"$row["cpf"]"</TD>" "<TD>" "Telefone:" "</TD>" "<TD>" $row["tel"] "</TD>" "<TD>" "Data de Nascimento:" "</TD>" "<TD>"$row["dtnasc"]"</TD>" "<TD>" "E-mail:" "</TD>" "<TD>"$row["email"]"</TD>" "<TD>" "Endereço:" "</TD>" "<TD>"$row["ender"]"</TD>" "<TD>" "Bairro:" "</TD>" "<TD>"$row["bairro"]"</TD>" "<TD>" "Cidade:" "</TD>" "<TD>"$row["cidade"]"</TD>" "<TD>" "CEP:" "</TD>" "<TD>"$row["cep"]"</TD>" "<TD>" "País:" "</TD>" "<TD>"$row["pais"]"</TD>""</TR>" "</TABLE>" "<br><br>";
+                echo "<table border=1>
+                <tr>
+                    <th>Código do Pedido</th>
+                    <th>Código de Cliente</th>
+                    <th>Código do Produto</th>
+                    <th>Descrição</th>
+                    <th>Valor do Pedido</th>
+                </tr>
+                <tr>
+                    <th>" . $row ["codped_PK"] . "</th>
+                    <th>" . $row["id_usuarios_FK"] . "</th>
+                    <th>" . $row["codprod_FK"] . "</th>
+                    <th>" . $row["descr"] . "</th>
+                    <th>" . $row["vlped"] . "</th>
+                </tr>
+                </table><br><br>";
             }
         } else {
             echo "0 resultados encontrados";

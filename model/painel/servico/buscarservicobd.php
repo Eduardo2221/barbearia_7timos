@@ -19,7 +19,23 @@
         // num_rows - dados de saída de cada linha
         while ($row = $result->fetch_assoc()) {
 
-            echo "Código do Serviço: " . $row ["codServ"] . " <br> Tipo de Serviço: " . $row["tipoServ"] . " <br> Valor do Serviço: " . $row["vlServ"] . " <br> Data do Serviço: " . $row["dtServ"] . " <br> Horario do Serviço: " . $row["hrServ"] . "<br><br>";
+
+            echo "<table border=1>
+            <tr>
+                <th>Código do Serviço</th>
+                <th>Tipo de Serviço</th>
+                <th>Valor do Serviço</th>
+                <th>Data do Serviço</th>
+                <th>Horario do Serviço</th>
+            </tr>
+            <tr>
+                <th>" . $row ["codServ"] . "</th>
+                <th>" . $row["tipoServ"] . "</th>
+                <th>" . $row["vlServ"] . "</th>
+                <th>" . $row["dtServ"] . "</th>
+                <th>" . $row["hrServ"] . "</th>
+            </tr>
+            </table><br><br>";
 
         }
     } else {
